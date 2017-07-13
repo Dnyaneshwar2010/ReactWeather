@@ -6,7 +6,7 @@ var Examples = (props) => {
         <div>
           <h3>Examples component.....:)</h3>
           <p> para ... </p>
-        </div>        
+        </div>
       )
   }
 
