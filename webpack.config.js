@@ -31,5 +31,5 @@ module.exports = {
       }
     ]
   },
-  //devtool: 'cheap_module_eval_source_map'
+  devtool: 'cheap_module_eval_source_map'
 };
