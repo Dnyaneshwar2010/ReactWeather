@@ -1,16 +1,16 @@
 var express = require('express');
 //create our app
 var app = express();
- // const PORT = process.env.PORT || 3000;
-const PORT = 3000;
+ const PORT = process.env.PORT || 3000;
+// const PORT = 3000;
 
- // app.use(function(req, res, next){
- // if(req.headers['x-forwarded-proto'] === 'http'){
- // 	next();
- // }else{
- // 	req.redirect('http://' + req.hostname + req.url);
- // }
- // });
+ app.use(function(req, res, next){
+ if(req.headers['x-forwarded-proto'] === 'https'){
+	 	req.redirect('http://' + req.hostname + req.url); 	
+ }else{
+	 next();
+ }
+ });
 
 app.use(express.static('public'));
 app.listen(PORT,function(){
