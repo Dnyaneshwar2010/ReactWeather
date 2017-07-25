@@ -6,7 +6,7 @@ var app = express();
 
  app.use(function(req, res, next){
  if(req.headers['x-forwarded-proto'] === 'https'){
-	 	req.redirect('http://' + req.hostname + req.url); 	
+	 	req.redirect('http://' + req.hostname + req.url);
  }else{
 	 next();
  }
